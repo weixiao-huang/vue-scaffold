@@ -1,13 +1,16 @@
 <template lang="pug">
 #app
-  img(src="./assets/logo.png")
-  router-view
+  el-menu(default-active="1", mode="horizontal", :router="true")
+    el-menu-item(index="1", :route="{ path: '/' }") 主页
+    el-menu-item(index="2", :route="{ path: '/colleges' }") 院校大全
+    el-menu-item(index="3", :route="{ path: '/major' }") 专业大全
+    el-menu-item(index="4", :route="{ path: '/ranking' }") 大学排名
+  router-view.router-view
 </template>
 
 
 <script>
 export default {
-  name: 'app'
 }
 </script>
 
@@ -19,5 +22,6 @@ export default {
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
-  margin-top 60px
+  .router-view
+    margin 4% 10%
 </style>
