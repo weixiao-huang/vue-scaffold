@@ -59,3 +59,26 @@ export const mockData = [
     ]
   }
 ]
+
+export const collegeList = [
+  {
+    name: '复旦大学',
+    area: '上海',
+    tags: [
+      { name: '985' },
+      { name: '211' },
+      { name: '综合' }
+    ],
+    ranking: 3
+  },
+  {
+    name: '上海交通大学',
+    area: '上海',
+    tags: [
+      { name: '985' },
+      { name: '211' },
+      { name: '综合' }
+    ],
+    ranking: 4
+  }
+]

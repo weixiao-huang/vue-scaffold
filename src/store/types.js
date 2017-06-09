@@ -1,0 +1,2 @@
+export const SET_COLLEGE_LIST = 'SET_COLLEGE_LIST'
+export const SET_MAJOR_LIST = 'SET_MAJOR_LIST'
