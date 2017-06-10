@@ -15,7 +15,17 @@
 
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
+  computed: {
+    ...mapState({
+      collegeRankingList: state => state.college.collegeRankingList
+    })
+  },
+  async created () {
+    await this.$store.dispatch('FetchRankingList')
+  },
   data () {
     return {
       data: [

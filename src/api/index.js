@@ -18,5 +18,8 @@ export default {
     console.log('0000', cj, kslbdm, xbdm, pcmc, xk)
     return Vue.axios.get(
     '/api/recommend', { params: { cj, kslbdm, xbdm, pcmc, xk } })
-  }
+  },
+  fetchRankingList: () => Vue.axios.get(
+    'api/rank'
+  )
 }

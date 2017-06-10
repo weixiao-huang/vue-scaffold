@@ -36,6 +36,14 @@ export const SearchCollegeByName = ({ commit }, name) => (
   ))
 )
 
+export const FetchRankingList = ({ commit }) => (
+  api.fetchRankingList().then(res => (
+    handleRes(res)(() => (
+      commit(types.SET_COLLEGE_RANKING_LIST, { collegeRankingList: res.data })
+    ))
+  ))
+)
+
 export const RecommendMajorList = ({ commit }, { score, typeId, genderId, pcmc, xk }) => (
   api.recommend(score, typeId, genderId, pcmc, xk).then(res => (
     handleRes(res)(() => (
