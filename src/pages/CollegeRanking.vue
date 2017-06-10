@@ -5,12 +5,10 @@
 
 <template lang="pug">
 #college-ranking
-  el-table(style="width: 100%", border, :data="data")
-    el-table-column(align="center", label="名次", prop="rank")
-    el-table-column(align="center", label="学校名称", prop="name")
-    el-table-column(align="center", label="地区排名")
-      el-table-column(align="center", label="地区", prop="region")
-      el-table-column(align="center", label="排名", prop="regionRank")
+  el-table(style="width: 100%", border, :data="collegeRankingList")
+    el-table-column(align="center", label="学校名称", prop="yxmc")
+    el-table-column(align="center", label="排名", prop="pm")
+    el-table-column(align="center", label="评分", prop="pf")
 </template>
 
 
